@@ -1,0 +1,13 @@
+@media (min-width: 640px) {
+  form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 80%;
+    border: 5px solid red;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .userData {
+    /* display: flex; */
+  }
+}

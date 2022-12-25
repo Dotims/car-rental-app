@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './styles/App.css';
+/* Importing the Data component from the Data.js file. */
+// import Data from './components/Data';
+import UserConst from './components/userCosts';
+import Calculations from './components/calculations';
+import RentCalculator from './components/calculationx';
+import './styles/calculation.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className='app'>
+      <section className='wrapper'>
+        <article className='header'>
+          <h1 className='title'>kalkulator wynajmu samochodu</h1>
+          <div className='header-text'>
+            <p className='header-text'>
+              skorzystaj z naszego kalkulatora, aby obliczyć koszty wynajmu
+              interesującego ciebie samochodu. Wprowadź dane, aby zobaczyć, ile
+              mogą wynosić koszty wynajmu samochodu.
+            </p>
+          </div>
+        </article>
+        {/* <Data />
+        <UserConst /> */}
+        <RentCalculator />
+      </section>
+    </section>
   );
 }
 

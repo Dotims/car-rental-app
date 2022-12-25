@@ -1,0 +1,31 @@
+@media (min-width: 640px) {
+  .userCost {
+    margin-left: auto;
+    margin-right: auto;
+    width: 77%;
+    border-radius: 10px;
+    background-color: #398bf7;
+    padding: 15px;
+    color: white;
+  }
+  h1 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .rentalDetails {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+  .details {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 19px;
+  }
+
+  .detailsCost {
+    font-size: 18px;
+  }
+}
