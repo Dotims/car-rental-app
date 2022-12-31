@@ -9,6 +9,8 @@ const defaultState = {
   rentTo: '',
   carCategory: '',
   difference: 0,
+  newDriver: 1,
+  kilometers: 0,
 };
 
 const AppContext = React.createContext(defaultState);
@@ -29,8 +31,11 @@ const AppProvider = ({ children }) => {
   const setRentTo = (event) => {
     dispatch({ type: 'CHANGE_RENT_TO', payload: event });
   };
-  const setDifference = (event) => {
-    dispatch({ type: 'CHANGE_DIFF', payload: event });
+  const setNewDriver = (event) => {
+    dispatch({ type: 'CHANGE_NEW_DRIVER', payload: event });
+  };
+  const setKilometers = (event) => {
+    dispatch({ type: 'CHANGE_KILOMETERS', payload: event });
   };
 
   return (
@@ -40,8 +45,9 @@ const AppProvider = ({ children }) => {
         setRoadLength,
         setDrivingLicenseYear,
         setRentFrom,
-        setDifference,
         setRentTo,
+        setNewDriver,
+        setKilometers,
       }}
     >
       {children}

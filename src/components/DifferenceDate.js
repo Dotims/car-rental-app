@@ -1,15 +1,9 @@
 import { React } from 'react';
 import { useGlobalContext } from '../context';
+import '../styles/differenceDate.css';
 
 const DifferenceDate = () => {
-  const {
-    setDifference,
-    difference,
-    rentFrom,
-    setRentFrom,
-    rentTo,
-    setRentTo,
-  } = useGlobalContext();
+  const { rentFrom, setRentFrom, rentTo, setRentTo } = useGlobalContext();
 
   const handleInitialDate = (e) => {
     setRentFrom(e.target.value);
@@ -19,34 +13,27 @@ const DifferenceDate = () => {
     setRentTo(e.target.value);
   };
 
-  const handledifferenceDate = (e) => {
-    const start = new Date(rentFrom);
-    const end = new Date(rentTo);
-    const differenceDateMiliseconds = end - start;
-    const difference = differenceDateMiliseconds / (1000 * 3600 * 24);
-
-    setDifference(difference);
-    e.preventDefault();
-    console.log(difference);
-  };
-
   return (
-    <div>
-      <input
-        type='date'
-        className='rentFrom'
-        value={rentFrom}
-        onChange={handleInitialDate}
-      />
-      <input
-        type='date'
-        className='rentTo'
-        value={rentTo}
-        onChange={handleFinalDate}
-      />
-      <button onClick={handledifferenceDate}>oblicz dni</button>
-      <div>Rental Period: {difference} days</div>
-    </div>
+    <section className='user-rental-date'>
+      <div className='date-input'>
+        <p>od kiedy chcesz wynająć samochód:</p>
+        <input
+          type='date'
+          className='rentFrom'
+          value={rentFrom}
+          onChange={handleInitialDate}
+        />
+      </div>
+      <div className='date-input'>
+        <p>do kiedy chcesz wynajmować samochód</p>
+        <input
+          type='date'
+          className='rentTo'
+          value={rentTo}
+          onChange={handleFinalDate}
+        />
+      </div>
+    </section>
   );
 };
 

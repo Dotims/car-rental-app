@@ -2,9 +2,7 @@ import React from 'react';
 import './styles/App.css';
 /* Importing the Data component from the Data.js file. */
 // import Data from './components/Data';
-import UserConst from './components/userCosts';
-import Calculations from './components/calculations';
-import RentCalculator from './components/calculationx';
+import RentCalculator from './components/Calculation';
 import './styles/calculation.css';
 
 function App() {
@@ -21,8 +19,6 @@ function App() {
             </p>
           </div>
         </article>
-        {/* <Data />
-        <UserConst /> */}
         <RentCalculator />
       </section>
     </section>
