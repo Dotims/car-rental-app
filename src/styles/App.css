@@ -15,39 +15,12 @@
   width: 80%;
 }
 
-.wrapper {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 @media (min-width: 640px) {
   .title {
     font-size: 3vh;
     text-align: center;
     padding: 25px;
   }
-
-  /*
-  .title::after {
-    content: '';
-    display: block;
-    height: 6px;
-    width: 17rem;
-    background: #0265fa;
-    left: 68vh;
-    position: relative;
-  }
-
-  .title:before {
-    content: '';
-    display: block;
-    height: 6px;
-    width: 17rem;
-    background: #0265fa;
-    top: 8vh;
-    position: relative;
-  } */
 
   .header {
     width: 100%;

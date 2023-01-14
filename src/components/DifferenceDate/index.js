@@ -3,7 +3,7 @@ import { DesktopDatePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { React } from 'react';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { useGlobalContext } from '../../context';
-import { StyledDateWrapper, StyledSection } from './styles';
+import { StyledDatePicker, StyledDateWrapper } from './styles';
 
 const DifferenceDate = () => {
   const { rentFrom, setRentFrom, rentTo, setRentTo } = useGlobalContext();
@@ -19,14 +19,14 @@ const DifferenceDate = () => {
   return (
     <StyledDateWrapper>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DesktopDatePicker
+        <StyledDatePicker
           label='Data wypożyczenia'
           inputFormat='DD/MM/YYYY'
           value={rentFrom}
           onChange={handleInitialDate}
           renderInput={(params) => <TextField {...params} />}
         />
-        <DesktopDatePicker
+        <StyledDatePicker
           label='Data oddania'
           inputFormat='DD/MM/YYYY'
           value={rentTo}

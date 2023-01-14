@@ -4,24 +4,23 @@ import './styles/App.css';
 // import Data from './components/Data';
 import RentCalculator from './components/Calculation';
 import './styles/calculation.css';
+import { StyledContainer, StyledDescription, StyledHeader } from './appStyles';
 
 function App() {
   return (
-    <section className='app'>
-      <section className='wrapper'>
-        <section className='header'>
-          <h1 className='title'>kalkulator wynajmu samochodu</h1>
-          <div className='header-text'>
-            <p className='header-text'>
-              skorzystaj z naszego kalkulatora, aby obliczyć koszty wynajmu
-              interesującego ciebie samochodu. Wprowadź dane, aby zobaczyć, ile
-              mogą wynosić koszty wynajmu samochodu.
-            </p>
-          </div>
-        </section>
-        <RentCalculator />
+    <StyledContainer>
+      <section className='header'>
+        <StyledHeader className='title'>kalkulator wynajmu samochodu</StyledHeader>
+        <div className='header-text'>
+          <StyledDescription>
+            Skorzystaj z naszego kalkulatora, aby obliczyć koszty wynajmu
+            interesującego ciebie samochodu. Wprowadź dane, aby zobaczyć, ile
+            mogą wynosić koszty wynajmu samochodu.
+          </StyledDescription>
+        </div>
       </section>
-    </section>
+      <RentCalculator />
+    </StyledContainer>
   );
 }
 
