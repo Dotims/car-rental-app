@@ -1,12 +1,13 @@
-import { ThemeProvider } from '@emotion/react';
+import dayjs from 'dayjs';
 import React, { useContext, useReducer } from 'react';
 import { reducer } from './reducer';
+import date from './helper';
 
 const defaultState = {
   roadLength: 0,
   drivingLicenseYear: 1900,
-  rentFrom: '',
-  rentTo: '',
+  rentFrom: dayjs(date),
+  rentTo: dayjs(date.addDays(5)),
   carCategory: '',
   difference: 0,
   newDriver: 1,

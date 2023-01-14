@@ -9,7 +9,7 @@ function App() {
   return (
     <section className='app'>
       <section className='wrapper'>
-        <article className='header'>
+        <section className='header'>
           <h1 className='title'>kalkulator wynajmu samochodu</h1>
           <div className='header-text'>
             <p className='header-text'>
@@ -18,7 +18,7 @@ function App() {
               mogą wynosić koszty wynajmu samochodu.
             </p>
           </div>
-        </article>
+        </section>
         <RentCalculator />
       </section>
     </section>
